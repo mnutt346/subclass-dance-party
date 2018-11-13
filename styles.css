@@ -1,7 +1,15 @@
 body, html{
   height:100%;
+  
 }
 body{
+  height:50%;
+  width: 80%;
+  display: grid;
+  grid-template: aaaaaaaaaa
+                 aabbbbbbaa
+                 aabbbbbbaa
+                 aaaaaaaaaa;
   margin: 0px;
   background-color:#444;
   font-size: 18px;
@@ -21,7 +29,8 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+  grid-area: b;
+  border-radius:100px;
   position:absolute;
+  content: url(src/dancerImages/yelling-nic-cage.jpg);
 }
