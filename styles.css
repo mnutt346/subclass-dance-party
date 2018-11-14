@@ -1,36 +1,87 @@
 body, html{
-  height:100%;
-  
+  height: 80%;
+  width: 80%;  
 }
 body{
-  height:50%;
-  width: 80%;
   display: grid;
-  grid-template: aaaaaaaaaa
-                 aabbbbbbaa
-                 aabbbbbbaa
-                 aaaaaaaaaa;
+  justify-items: center;
+  grid-template: "b b b b b" auto
+                 "a a a a a" auto
+                 "a c c c a" auto
+                 "a c c c a" auto
+                 "a a a a a" auto;
+                
   margin: 0px;
-  background-color:#444;
+  background-color:#444444;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: #000000;
 }
-.title, .addDancerButton{
+.title, .addDancerButton, .addTwirlyDancer, .addFancyDancer{
   padding:5px 12px;
   float:right;
 }
 .topbar{
+  grid-area: "b";
   height:32px;
-  background-color: #555;
+  background-color: #fd54fd;
+  color: #000000;
 }
 .title{
-  background-color: #777;
+  background-color: #faf603;
 }
 .dancer{
-  grid-area: b;
-  border-radius:100px;
+  grid-area: "c";
+  max-width: 20%;
+  max-height: 20%;
   position:absolute;
   content: url(src/dancerImages/yelling-nic-cage.jpg);
 }
+
+.twirlyDancer{
+  grid-area: "c";
+  max-width: 20%;
+  max-height: 20%;
+  position:absolute;
+  content: url(src/dancerImages/nic-wants-you.gif);
+  animation-name: twirl;
+  animation-duration: 2500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.fancyDancer{
+  grid-area: "c";
+  max-width: 20%;
+  max-height: 20%;
+  position:absolute;
+  content: url(src/dancerImages/nic-needs-you.png);
+  
+}
+
+
+
+
+
+
+
+/* ========================= ANIMATION =====================*/
+@keyframes twirl {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}
+
+
+/* @keyframes pulse {
+  0%, 100% {
+    background-color: #69f3fd
+  }
+  50% {
+    background-color: #ff0000;
+  }
+} */
