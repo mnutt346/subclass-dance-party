@@ -1,8 +1,11 @@
 body, html{
-  height: 80%;
-  width: 80%;  
+  height: 100%;
+  width: 100%;
 }
 body{
+  background: url(src/dancerImages/nic-background.jpg) no-repeat center center fixed;
+  background-size: cover;
+
   display: grid;
   justify-items: center;
   grid-template: "b b b b b" auto
@@ -12,7 +15,7 @@ body{
                  "a a a a a" auto;
                 
   margin: 0px;
-  background-color:#444444;
+  background-color:#2e40a8;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -57,7 +60,7 @@ body, a:link, a:visited, a:active{
   max-height: 20%;
   position:absolute;
   content: url(src/dancerImages/nic-needs-you.png);
-  
+  animation: nudge 5s linear infinite alternate;  
 }
 
 
@@ -69,19 +72,27 @@ body, a:link, a:visited, a:active{
 /* ========================= ANIMATION =====================*/
 @keyframes twirl {
   from {
-    transform:rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    transform:rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
-
-/* @keyframes pulse {
+@keyframes nudge {
   0%, 100% {
-    background-color: #69f3fd
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: rotate(180deg);
   }
   50% {
-    background-color: #ff0000;
+    transform: translate(150px, 0);
   }
-} */
+  60% {
+    transform: rotate(180deg);
+  }
+  80% {
+    transform: translate(-150px, 0);
+  }
+}

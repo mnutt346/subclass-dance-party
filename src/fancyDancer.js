@@ -14,7 +14,7 @@ makeFancyDancer.prototype.step = function (timeBetweenSteps) {
 
     makeDancer.prototype.step.call(this, timeBetweenSteps);
     // console.log('inside twirl method', timeBetweenSteps);
-    this.$node.animate('twirl')
+    this.$node.animate('nudge')
 };
 
 makeFancyDancer.prototype.setPosition = function(left, top){
